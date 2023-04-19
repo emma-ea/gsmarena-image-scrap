@@ -3,9 +3,11 @@ import requests
 from bs4 import BeautifulSoup
 
 url = 'https://www.gsmarena.com/samsung_galaxy_s20+-pictures-10080.php'
-image_container_div_id = 'binkies-container' #'pictures-list'
 folder = 'samsung-s2oplus'
 path = f'/home/emma/Downloads/gsmarena-imgs/{folder}/'
+
+# scrape entry
+image_container_div_id = 'binkies-container' #'pictures-list'
 
 
 def fetchBody():
