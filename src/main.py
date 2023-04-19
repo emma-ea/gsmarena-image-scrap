@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup
 url = 'https://www.gsmarena.com/samsung_galaxy_s20+-pictures-10080.php'
 image_container_div_id = 'binkies-container' #'pictures-list'
 folder = 'samsung-s2oplus'
+path = f'/home/emma/Downloads/gsmarena-imgs/{folder}/'
+
 
 def fetchBody():
     response = requests.get(url)
@@ -38,7 +40,6 @@ def downloadImage(img):
     imgRaw = requests.get(img).content
     imgName = img.split('/')[-1]
     print('saving >> ', imgName)
-    path = f'/home/emma/Downloads/gsmarena-imgs/{folder}/'
     if not os.path.exists(path):
         os.makedirs(path)
     with open(path+imgName, 'wb') as writer:
@@ -54,4 +55,5 @@ if __name__ == '__main__':
             downloadImage(link)
     except:
         print('failed. shouldn\'t happen')
+
 
