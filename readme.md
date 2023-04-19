@@ -3,7 +3,7 @@
 Scraper downloads images from gsmarena.com 'our photos' section
 
 ### To use
-Update these before use
+Update these paths and dir names
 
 > url to pictures page of device
 
